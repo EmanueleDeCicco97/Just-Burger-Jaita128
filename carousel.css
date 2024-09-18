@@ -1,0 +1,11 @@
+.carousel {
+    width: 500px; /* Larghezza totale del carosello */
+    height: 500px; /* Altezza totale del carosello */
+    margin: 0 auto; /* Centra il carosello nella pagina */
+}
+
+.carousel-item img {
+    width: 100%; /* Adatta l'immagine alla larghezza del carosello */
+    height: 100%; /* Adatta l'immagine all'altezza del carosello */
+    object-fit: cover; /* Riempi l'area senza distorcere l'immagine */
+}
