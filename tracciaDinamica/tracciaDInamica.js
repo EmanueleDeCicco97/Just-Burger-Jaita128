@@ -1,4 +1,4 @@
-const svg = document.getElementById('zigzag-svg');
+const svg = document.getElementById('banner-line');
             const path = svg.querySelector('path');
 
             const svgWidth = svg.clientWidth; // Ottieni la larghezza del SVG
@@ -7,7 +7,7 @@ const svg = document.getElementById('zigzag-svg');
             const startX = 0;       // Inizio X della traccia
             const startY = svgHeight / 2;  // Inizio Y (centrato verticalmente)
             const amplitude = svgHeight / 3; // Altezza massima degli zig-zag
-            const wavelength = svgWidth / 10; // Larghezza di un ciclo zig-zag
+            const wavelength = svgWidth / 8; // Larghezza di un ciclo zig-zag
 
             let zigzagPath = `M ${startX} ${startY} `; // Inizio del percorso
 
@@ -27,3 +27,17 @@ const svg = document.getElementById('zigzag-svg');
 
             // Imposta l'attributo 'd' del percorso con la stringa creata
             path.setAttribute('d', zigzagPath);
+
+            window.onload = function() {
+                const links = document.querySelectorAll('.nav-link');
+                
+                links.forEach(link => {
+                  const svgline = link.nextElementSibling;
+                  const line = svgline.querySelector('line');
+                  
+                  // Imposta la larghezza dell'SVG in base alla larghezza del link
+                  const linkWidth = link.getBoundingClientRect().width;
+                  svgline.setAttribute('width', linkWidth);
+                  line.setAttribute('x2', linkWidth); // Adatta la linea alla larghezza del link
+                });
+              };
