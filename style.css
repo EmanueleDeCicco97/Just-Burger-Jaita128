@@ -303,3 +303,13 @@ path {
     opacity: 1; /* Animazione di fade-in */
     transition: opacity 1s ease; /* Rimuove il delay per la visibilità */
 }
+
+.banner {
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Applica una transizione anche al logo */
+#logo-img {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1; /* Stato di visibilità iniziale */
+}
