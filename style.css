@@ -350,7 +350,6 @@ path {
 
 /* Mostra il div quando si passa sopra lo span */
 #classe:hover .group-members {
-<<<<<<< HEAD
     visibility: visible; /* Rende visibile il div */
     opacity: 1; /* Animazione di fade-in */
     transition: opacity 1s ease; /* Rimuove il delay per la visibilità */
@@ -360,16 +359,12 @@ path {
     transition: background-color 0.5s ease-in-out;
 }
 
-/* Applica una transizione anche al logo */
+/* Applica una transizione al logo */
 #logo-img {
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1; /* Stato di visibilità iniziale */
-=======
-    visibility: visible;
-    /* Rende visibile il div */
-    opacity: 1;
-    /* Animazione di fade-in */
-    transition: opacity 1s ease;
-    /* Rimuove il delay per la visibilità */
->>>>>>> 4416c357ffbfb0206a0b391b62c793950519387c
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effetto di leggera scalatura durante il cambio */
+#logo-img.scale-up {
+    transform: scale(1.1); /* Leggero ingrandimento */
 }

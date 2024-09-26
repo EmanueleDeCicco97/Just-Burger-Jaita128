@@ -9,17 +9,27 @@ document.addEventListener("DOMContentLoaded", function() {
     const logoImg = document.getElementById('logo-img');
 
     // Funzione per cambiare il logo con transizione
-    function changeLogo(logoSrc) {
-        logoImg.style.opacity = '0';  // Rendi il logo trasparente
-        setTimeout(function() {
-            logoImg.src = logoSrc;  // Cambia il logo
-            logoImg.style.opacity = '1';  // Riporta il logo visibile
-        }, 300);  // Tempo che coincide con la durata della transizione (0.3s)
+    function changeLogo(logoSrc, animate = true) {
+        if (animate) {
+            // Aggiungi l'effetto di scala al logo
+            logoImg.classList.add('scale-up');
+
+            setTimeout(function() {
+                logoImg.src = logoSrc;  // Cambia il logo
+            }, 150);  // Cambia il logo a metà della transizione
+
+            setTimeout(function() {
+                logoImg.classList.remove('scale-up');  // Rimuovi l'effetto di scala
+            }, 300);  // Completa l'effetto di transizione
+        } else {
+            // Cambia il logo senza animazione
+            logoImg.src = logoSrc;
+        }
     }
 
     // Funzione per cambiare il logo e il colore del banner
-    function changeBanner(logoSrc, bannerClass) {
-        changeLogo(logoSrc);  // Cambia il logo con transizione
+    function changeBanner(logoSrc, bannerClass, animate = true) {
+        changeLogo(logoSrc, animate);  // Cambia il logo con transizione
         bannerSection.className = 'banner ps-5 d-flex justify-content-start align-items-center w-100 ' + bannerClass;
     }
 
@@ -27,16 +37,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const savedLogo = localStorage.getItem('selectedLogo');
     const savedBannerClass = localStorage.getItem('selectedBannerClass');
 
-    // Se ci sono dati salvati, applica il logo e il colore
+    // Se ci sono dati salvati, applica il logo e il colore senza animazione
     if (savedLogo && savedBannerClass) {
-        changeBanner(savedLogo, savedBannerClass);
+        changeBanner(savedLogo, savedBannerClass, false); // Disabilita l'animazione
     }
 
     // Event Listener per Veganino
     veganinoBox.addEventListener('click', function() {
         const logoSrc = 'Images/logo/logo-green.png';
         const bannerClass = 'bg-g';
-        changeBanner(logoSrc, bannerClass);
+        changeBanner(logoSrc, bannerClass); // Usa l'animazione di default
 
         // Salva i valori in localStorage
         localStorage.setItem('selectedLogo', logoSrc);
@@ -47,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     boringBurgerBox.addEventListener('click', function() {
         const logoSrc = 'Images/logo/logo-yellow.png';
         const bannerClass = 'bg-y';
-        changeBanner(logoSrc, bannerClass);
+        changeBanner(logoSrc, bannerClass); // Usa l'animazione di default
 
         // Salva i valori in localStorage
         localStorage.setItem('selectedLogo', logoSrc);
@@ -58,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     orangeVertigoBox.addEventListener('click', function() {
         const logoSrc = 'Images/logo/logo-orange.png';
         const bannerClass = 'bg-o';
-        changeBanner(logoSrc, bannerClass);
+        changeBanner(logoSrc, bannerClass); // Usa l'animazione di default
 
         // Salva i valori in localStorage
         localStorage.setItem('selectedLogo', logoSrc);
