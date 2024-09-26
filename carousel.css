@@ -1,17 +1,37 @@
-.carousel {
-    width: 100%; /* Larghezza totale del carosello */
-    height: 80vh; /* Altezza totale del carosello */
-    margin: 0 auto; /* Centra il carosello nella pagina */
+.burger-box {
+    padding-left: 20px;
+    width: 22vw;  /* Imposta una larghezza maggiore per i burger-box */
+    height: 30vh; /* Imposta un'altezza maggiore per i burger-box */
+    transform: skewX(-5deg); /* Inclinazione per dare l'effetto desiderato */
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Aggiunta della transizione */
+}
+.burger-box:hover {
+    transform: skewX(-7deg); /* Inclinazione per dare l'effetto desiderato */
+    opacity: 1;
+}
+.bg-slide {
+    background-color: #04050794;
+}
+.carousel-inner, .carousel-item {
+    height: 100%; /* Mantiene l'altezza uniforme per il carosello */
 }
 
-.carousel-item img {
-    width: 100%; /* Adatta l'immagine alla larghezza del carosello */
-    height: 100%; /* Adatta l'immagine all'altezza del carosello */
-    max-width: 100%;
-    max-height: 50vh;
+img.object-fit-cover {
+    object-fit: cover; /* Copre l'intera area del carosello senza deformarsi */
 }
 
-.carousel-slide {
-    width: 100%;
-    height: 80vh; /* Altezza totale del carosello */;
+.bor-bur{
+    background: url('Images/carouselimg/boring_burger.gif') no-repeat bottom right;
+    background-size: 60%; /* Adatta l'immagine alle dimensioni del div */
+}
+.veg-bur{
+    background: url('Images/carouselimg/vegan-burger.gif') no-repeat bottom right;
+    background-size: 60%; /* Adatta l'immagine alle dimensioni del div */
+}
+.og-bur{
+    background: url('Images/carouselimg/orange_burger.gif') no-repeat bottom right;
+    background-size: 60%; /* Adatta l'immagine alle dimensioni del div */
 }

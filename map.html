@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dove Siamo</title>
+    <!-- Bootstrap JS and dependencies -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="carousel.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,16 +30,31 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="index.html">Home</a>
+                    <svg class="animated-svg-line" height="5">
+                        <line class="animated" x1="0" y1="2.5" x2="100%" y2="2.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="order.html">Ordina</a>
+                    <a class="nav-link" href="map.html">Dove Siamo</a>
+                    <svg class="animated-svg-line" height="5">
+                        <line class="animated" x1="0" y1="2.5" x2="100%" y2="2.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="map.html">Dove Siamo</a>
+                    <a class="nav-link" href="contact.html">Contatti</a>
+                    <svg class="animated-svg-line" height="5">
+                        <line class="animated" x1="0" y1="2.5" x2="100%" y2="2.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
                 </li>
-                <li class="nav-item"></li>
-                <a class="nav-link active" href="contact.html">Contatti</a>
+                <li class="nav-item">
+                    <a class="button" href="order.html">
+                        <svg class="animated-svg">
+                        <rect class="animated" x="0" y="0" fill="none" stroke="black" stroke-width="5" stroke-dasharray="10, 10"
+                                stroke-linecap="round" rx="5" ry="5" />
+                        </svg>
+                        <span>Ordina ora</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -68,5 +88,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
-
+<script src="tracciaDinamica/tracciaDInamica.js"></script>
 </html>
