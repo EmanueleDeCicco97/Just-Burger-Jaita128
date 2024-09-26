@@ -13,34 +13,45 @@ body {
 .bg-day {
     background-color: #fbfaf8;
 }
+
 .bg-night {
     background-color: #040507;
 }
+
 .bg-y {
     background-color: #ffd748;
 }
+
 .bg-g {
     background-color: #67d185;
 }
+
 .bg-o {
     background-color: #ffb056;
 }
+
 .fnt-light {
     color: #040507;
 }
+
 .fnt-dark {
     color: #fbfaf8;
 }
+
 .txt-shadow {
     text-shadow: 2px 2px 3px #00000030;
 }
+
 .fw-900 {
     font-weight: 900;
 }
+
 /* Aggiungi una classe personalizzata per il letter-spacing */
 .ls-2 {
-    letter-spacing: 0.05em; /* Aumenta lo spazio tra le lettere */
+    letter-spacing: 0.05em;
+    /* Aumenta lo spazio tra le lettere */
 }
+
 /* navbar e bottoni gasati */
 .navbar {
     padding: 20px;
@@ -70,7 +81,8 @@ body {
     text-decoration: none;
     color: #040507;
     position: relative;
-    padding-bottom: 5px; /* Spazio tra il link e l'SVG */
+    padding-bottom: 5px;
+    /* Spazio tra il link e l'SVG */
 }
 
 .animated-svg-line {
@@ -89,26 +101,34 @@ body {
     transition: stroke-dashoffset 0.5s ease;
 }
 
-.nav-link:hover + .animated-svg-line .animated {
+.nav-link:hover+.animated-svg-line .animated {
     stroke-dashoffset: 100;
     animation: dash 2s linear infinite;
 }
 
 /* Stile generale per i link nella navbar */
 .navbar-nav .nav-link {
-    font-weight: 900;             /* Rende i link bold */
-    font-size: 1.25rem;           /* Aumenta la dimensione del testo */
-    margin-right: 20px;           /* Aggiunge spazio tra i link */
-    text-transform: uppercase;     /* Nessuna decorazione di default */
+    font-weight: 900;
+    /* Rende i link bold */
+    font-size: 1.25rem;
+    /* Aumenta la dimensione del testo */
+    margin-right: 20px;
+    /* Aggiunge spazio tra i link */
+    text-transform: uppercase;
+    /* Nessuna decorazione di default */
 }
-  /* Se il link è attivo, la linea è piena */
-.nav-link.active + .animated-svg-line .animated {
-    stroke-dasharray: none; /* Rimuove il tratteggio */
-    stroke-dashoffset: 0; /* Nessun offset */
+
+/* Se il link è attivo, la linea è piena */
+.nav-link.active+.animated-svg-line .animated {
+    stroke-dasharray: none;
+    /* Rimuove il tratteggio */
+    stroke-dashoffset: 0;
+    /* Nessun offset */
 }
 
 .navbar-nav.ms-auto {
-    margin-right: 50px;        /* Sposta i link più verso destra */
+    margin-right: 50px;
+    /* Sposta i link più verso destra */
 }
 
 .button {
@@ -122,6 +142,9 @@ body {
     text-transform: uppercase;
     font-weight: 900;
     font-style: italic;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
 }
 
 .animated-svg {
@@ -134,26 +157,34 @@ body {
 
 .button span {
     position: relative;
-    z-index: 1; /* Porta il testo sopra l'SVG */
+    z-index: 1;
+    /* Porta il testo sopra l'SVG */
 }
 
 .animated {
-    width: calc(100% - 10px); /* Calcola la larghezza del rettangolo in base al contenuto, meno lo spessore */
-    height: calc(100% - 10px); /* Calcola l'altezza del rettangolo in base al contenuto, meno lo spessore */
-    x: 5;  /* Compensa lo spessore del bordo */
-    y: 5;  /* Compensa lo spessore del bordo */
+    width: calc(100% - 10px);
+    /* Calcola la larghezza del rettangolo in base al contenuto, meno lo spessore */
+    height: calc(100% - 10px);
+    /* Calcola l'altezza del rettangolo in base al contenuto, meno lo spessore */
+    x: 5;
+    /* Compensa lo spessore del bordo */
+    y: 5;
+    /* Compensa lo spessore del bordo */
     transition: all 0.5s ease;
 }
+
 .button:hover .animated {
-stroke-dashoffset: 100; /* Animazione su hover */
-animation: dash 2s linear infinite;
+    stroke-dashoffset: 100;
+    /* Animazione su hover */
+    animation: dash 2s linear infinite;
 }
 
 @keyframes dash {
-to {
-    stroke-dashoffset: 200;
+    to {
+        stroke-dashoffset: 200;
+    }
 }
-}
+
 /* fine nav e bottoni */
 
 .hero {
@@ -174,7 +205,7 @@ to {
     padding-bottom: 1vh;
     text-align: left;
     font-weight: 900;
-    font-size: 1.8rem;  
+    font-size: 1.8rem;
     font-style: italic;
     text-transform: uppercase;
     color: #040507
@@ -225,7 +256,8 @@ footer {
     padding: 20px 0;
     text-align: center;
     position: relative;
-    bottom: 0px; left: 0px;
+    bottom: 0px;
+    left: 0px;
     width: 100%;
 
 }
@@ -240,42 +272,56 @@ svg {
     width: 100%;
     height: 100%;
 }
+
 path {
     stroke: #040507;
     stroke-width: 4;
     stroke-linecap: round;
     stroke-linejoin: round;
-        fill: transparent;
+    fill: transparent;
 
     /* Impostazioni per l'animazione */
-    stroke-dasharray: 10; /* Lunghezza dei tratti */
-    stroke-dashoffset: 0; /* Inizia senza offset */
-    animation: draw 15s linear infinite alternate; /* Animazione della linea */
-    }
+    stroke-dasharray: 10;
+    /* Lunghezza dei tratti */
+    stroke-dashoffset: 0;
+    /* Inizia senza offset */
+    animation: draw 15s linear infinite alternate;
+    /* Animazione della linea */
+}
 
 /* Definizione dell'animazione */
 @keyframes draw {
     from {
-        stroke-dashoffset: 1000; /* Inizia completamente nascosto */
+        stroke-dashoffset: 1000;
+        /* Inizia completamente nascosto */
     }
+
     to {
-        stroke-dashoffset: 0; /* Al termine, la linea è completamente visibile */
+        stroke-dashoffset: 0;
+        /* Al termine, la linea è completamente visibile */
     }
 }
+
 #banner-line {
-    width: 35%;  /* Definisce la larghezza del tuo SVG */
-    height: auto;  /* Mantiene l'aspetto proporzionale */
+    width: 35%;
+    /* Definisce la larghezza del tuo SVG */
+    height: auto;
+    /* Mantiene l'aspetto proporzionale */
 }
 
 #sedi-line {
-    width: 35%;  /* Definisce la larghezza del tuo SVG */
-    height: auto;  /* Mantiene l'aspetto proporzionale */
+    width: 35%;
+    /* Definisce la larghezza del tuo SVG */
+    height: auto;
+    /* Mantiene l'aspetto proporzionale */
 }
 
 /* Contenitore del footer */
 .custom-footer {
-    width: 25%; /* Imposta la larghezza al 40% */
-    margin-left: auto; /* Allinea il footer verso destra */
+    width: 25%;
+    /* Imposta la larghezza al 40% */
+    margin-left: auto;
+    /* Allinea il footer verso destra */
 }
 
 /* Span che contiene il gruppo */
@@ -286,20 +332,28 @@ path {
 
 /* Div che contiene i membri del gruppo (nascosto di default) */
 .group-members {
-    visibility: hidden; /* Nascosto ma mantiene il posizionamento */
+    visibility: hidden;
+    /* Nascosto ma mantiene il posizionamento */
     position: absolute;
-    bottom: 120%; /* Posiziona il div sopra lo span */
+    bottom: 120%;
+    /* Posiziona il div sopra lo span */
     right: -20px;
     border-radius: 5px;
     width: 200px;
-    opacity: 0; /* Opacità iniziale 0 */
-    transition: opacity 1s ease, visibility 0s 1s; /* Animazione di fade-in */
-    z-index: 1000; /* Porta il div sopra gli altri elementi */
+    opacity: 0;
+    /* Opacità iniziale 0 */
+    transition: opacity 1s ease, visibility 0s 1s;
+    /* Animazione di fade-in */
+    z-index: 1000;
+    /* Porta il div sopra gli altri elementi */
 }
 
 /* Mostra il div quando si passa sopra lo span */
 #classe:hover .group-members {
-    visibility: visible; /* Rende visibile il div */
-    opacity: 1; /* Animazione di fade-in */
-    transition: opacity 1s ease; /* Rimuove il delay per la visibilità */
+    visibility: visible;
+    /* Rende visibile il div */
+    opacity: 1;
+    /* Animazione di fade-in */
+    transition: opacity 1s ease;
+    /* Rimuove il delay per la visibilità */
 }
