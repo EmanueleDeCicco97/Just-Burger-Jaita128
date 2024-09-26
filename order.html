@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ordina i Panini</title>
+<<<<<<< HEAD
     <!-- Bootstrap JS and dependencies -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <script src="burgerColorChange.js"></script>
+=======
+    <!-- Bootstrap CSS -->
+>>>>>>> 4416c357ffbfb0206a0b391b62c793950519387c
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,26 +37,29 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                     <svg class="animated-svg-line" height="5">
-                        <line class="animated" x1="0" y1="2.5" x2="100%" y2="2.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                        <line class="animated" x1="0" y1="2.5" x2="100%" y2="2.5" stroke="black" stroke-width="4"
+                            stroke-linecap="round" />
                     </svg>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="map.html">Dove Siamo</a>
                     <svg class="animated-svg-line" height="5">
-                        <line class="animated" x1="0" y1="2.5" x2="100%" y2="2.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                        <line class="animated" x1="0" y1="2.5" x2="100%" y2="2.5" stroke="black" stroke-width="4"
+                            stroke-linecap="round" />
                     </svg>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contatti</a>
                     <svg class="animated-svg-line" height="5">
-                        <line class="animated" x1="0" y1="2.5" x2="100%" y2="2.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                        <line class="animated" x1="0" y1="2.5" x2="100%" y2="2.5" stroke="black" stroke-width="4"
+                            stroke-linecap="round" />
                     </svg>
                 </li>
                 <li class="nav-item">
                     <a class="button" href="order.html">
                         <svg class="animated-svg">
-                        <rect class="animated" x="0" y="0" fill="none" stroke="black" stroke-width="5" stroke-dasharray="10, 10"
-                                stroke-linecap="round" rx="5" ry="5" />
+                            <rect class="animated" x="0" y="0" fill="none" stroke="black" stroke-width="5"
+                                stroke-dasharray="10, 10" stroke-linecap="round" rx="5" ry="5" />
                         </svg>
                         <span>Ordina ora</span>
                     </a>
@@ -62,29 +70,18 @@
     <div id="navspacer"></div>
 
     <!-- Main Content -->
-    <div class="container article-content mt-8 mt-lg-7">
+    <div class="container article-content mt-5 mt-lg-7">
         <div class="row">
             <!-- Panini Cards -->
             <div class="col-md-8">
-                <div class="card-deck" id="menu">
-                    <!-- Esempio di card per i panini -->
-                    <div class="card">
-                        <img src="Images/NAPOLI.png" class="card-img-top" alt="Panino 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Panino 1</h5>
-                            <p class="card-text">Delizioso panino con ingredienti freschi.</p>
-                            <p class="card-text"><strong>€5.00</strong></p>
-                            <button class="btn btn-primary" onclick="aggiungiAlCarrello('Panino 1', 5.00)">Aggiungi al
-                                Carrello</button>
-                        </div>
-                    </div>
-                    <!-- Aggiungi altre card come necessario -->
+                <div class="row" id="menu">
+                    <!-- Le card dei panini verranno generate qui -->
                 </div>
             </div>
 
             <!-- Cart Sidebar -->
             <div class="col-md-4">
-                <div class="cart">
+                <div class="cart mt-4"> <!-- Aggiunta la classe mt-4 per margine superiore -->
                     <h4>Carrello</h4>
                     <div id="carrello">
                         <!-- Gli elementi del carrello verranno aggiunti dinamicamente -->
@@ -93,7 +90,16 @@
                     <div id="totale">
                         <strong>Totale:</strong> €0.00
                     </div>
-                    <a href="#" class="btn btn-primary btn-block">Procedi al Pagamento</a>
+                    <button class="button w-100 mt-auto" style="color: black;"
+                        onclick="aggiungiAlCarrello('${panino.nome}', ${panino.prezzo})">
+                        <svg class="animated-svg">
+                            <rect class="animated" x="0" y="0" fill="none" stroke="black" stroke-width="5"
+                                stroke-dasharray="10, 10" stroke-linecap="round" rx="5" ry="5" />
+                        </svg>
+                        <span>Procedi al Pagamento</span>
+                    </button>
+
+                    <!-- Modificato per adattarsi -->
                 </div>
             </div>
         </div>
@@ -110,6 +116,41 @@
     <script>
         let carrello = {};
         let totale = 0;
+
+        // Array di oggetti per i panini
+        const panini = [
+            { nome: 'Panino Napoli', descrizione: 'Delizioso panino con ingredienti freschi.', prezzo: 5.00, immagine: 'Images/NAPOLI.png' },
+            { nome: 'Panino Milano', descrizione: 'Panino gourmet con salumi selezionati.', prezzo: 6.50, immagine: 'Images/carouselimg/7.1 charcoal burger 1.jpg' },
+            { nome: 'Panino Roma', descrizione: 'Panino classico con mozzarella di bufala.', prezzo: 7.00, immagine: 'Images/carouselimg/7.1 charcoal burger 1.jpg' },
+            { nome: 'Panino Torino', descrizione: 'Panino con carne e verdure grigliate.', prezzo: 6.00, immagine: 'Images/carouselimg/7.1 charcoal burger 1.jpg' },
+            { nome: 'Panino Firenze', descrizione: 'Panino vegetariano con pesto e pomodori secchi.', prezzo: 5.50, immagine: 'Images/carouselimg/7.1 charcoal burger 1.jpg' },
+        ];
+
+        function generaCard() {
+            const menuDiv = document.getElementById('menu');
+            panini.forEach(panino => {
+                const card = document.createElement('div');
+                card.className = 'col-sm-12 col-md-6 col-lg-4 mb-4'; // Aggiorna la griglia per dispositivi mobili
+                card.innerHTML = `
+                    <div class="card h-100 bg-y">
+                        <img src="${panino.immagine}" class="card-img-top" alt="${panino.nome}">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">${panino.nome}</h5>
+                            <p class="card-text">${panino.descrizione}</p>
+                            <p class="card-text"><strong>€${panino.prezzo.toFixed(2)}</strong></p>
+                            <button class="button w-100 mt-auto" onclick="aggiungiAlCarrello('${panino.nome}', ${panino.prezzo})">
+                                 <svg class="animated-svg">
+                            <rect class="animated" x="0" y="0" fill="none" stroke="black" stroke-width="5" stroke-dasharray="10, 10" stroke-linecap="round" rx="5" ry="5" />
+                        </svg>
+                                <span>Aggiungi al Carrello</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                menuDiv.appendChild(card);
+            });
+        }
+
 
         function aggiungiAlCarrello(nomePanino, prezzo) {
             // Aggiungi il panino al carrello
@@ -130,7 +171,7 @@
             for (let nomePanino in carrello) {
                 const item = carrello[nomePanino];
                 carrelloDiv.innerHTML += `
-                    <div class="cart-item">
+                    <div class="cart-item d-flex justify-content-between">
                         <span>${nomePanino} x ${item.quantita}</span>
                         <span>€${(item.prezzo * item.quantita).toFixed(2)}</span>
                     </div>
@@ -140,7 +181,10 @@
             // Aggiorna il totale
             document.getElementById('totale').innerHTML = `<strong>Totale:</strong> €${totale.toFixed(2)}`;
         }
+
+        // Genera le card dei panini all'avvio
+        generaCard();
     </script>
 </body>
-    <script src="tracciaDinamica/tracciaDInamica.js"></script>
+
 </html>
