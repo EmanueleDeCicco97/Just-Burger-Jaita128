@@ -42,7 +42,7 @@
 }
 .not-bur{
     background: url('Images/panini/nothing_burger.png') no-repeat bottom right;
-    background-size: 100%; /* Adatta l'immagine alle dimensioni del div */
+    background-size: cover; /* Adatta l'immagine alle dimensioni del div */
 }
 
 .m4tf-box {
