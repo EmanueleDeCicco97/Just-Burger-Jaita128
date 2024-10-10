@@ -308,6 +308,7 @@ path {
     height: auto;
     /* Mantiene l'aspetto proporzionale */
 }
+
 #banner-line-map {
     width: 100%;
     /* Definisce la larghezza del tuo SVG */
@@ -356,9 +357,12 @@ path {
 
 /* Mostra il div quando si passa sopra lo span */
 #classe:hover .group-members {
-    visibility: visible; /* Rende visibile il div */
-    opacity: 1; /* Animazione di fade-in */
-    transition: opacity 1s ease; /* Rimuove il delay per la visibilità */
+    visibility: visible;
+    /* Rende visibile il div */
+    opacity: 1;
+    /* Animazione di fade-in */
+    transition: opacity 1s ease;
+    /* Rimuove il delay per la visibilità */
 }
 
 .banner {
@@ -372,5 +376,19 @@ path {
 
 /* Effetto di leggera scalatura durante il cambio */
 #logo-img.scale-up {
-    transform: scale(1.1); /* Leggero ingrandimento */
+    transform: scale(1.1);
+    /* Leggero ingrandimento */
+}
+
+.card-g {
+    background-color: #67d185;
+}
+
+.card-y {
+    background-color: #ffd748;
+
+}
+
+.card-o {
+    background-color: #ffb056;
 }

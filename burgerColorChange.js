@@ -11,26 +11,44 @@ document.addEventListener("DOMContentLoaded", function() {
     // Funzione per cambiare il logo con transizione
     function changeLogo(logoSrc, animate = true) {
         if (animate) {
-            // Aggiungi l'effetto di scala al logo
             logoImg.classList.add('scale-up');
-
             setTimeout(function() {
                 logoImg.src = logoSrc;  // Cambia il logo
-            }, 150);  // Cambia il logo a metà della transizione
-
+            }, 150);
             setTimeout(function() {
                 logoImg.classList.remove('scale-up');  // Rimuovi l'effetto di scala
-            }, 300);  // Completa l'effetto di transizione
+            }, 300);
         } else {
-            // Cambia il logo senza animazione
             logoImg.src = logoSrc;
         }
     }
 
-    // Funzione per cambiare il logo e il colore del banner
+    // Funzione per cambiare il logo, il colore del banner e le card
     function changeBanner(logoSrc, bannerClass, animate = true) {
-        changeLogo(logoSrc, animate);  // Cambia il logo con transizione
+        changeLogo(logoSrc, animate);
         bannerSection.className = 'banner ps-5 d-flex justify-content-start align-items-center w-100 ' + bannerClass;
+
+        // Cambia il colore delle card in base alla selezione
+        changeCardColor(bannerClass);
+    }
+
+    // Funzione per cambiare il colore delle card
+    function changeCardColor(bannerClass) {
+        const cards = document.querySelectorAll('.card'); // Seleziona tutte le card
+
+        // Rimuovi le classi di colore esistenti
+        cards.forEach(card => {
+            card.classList.remove('card-g', 'card-y', 'card-o');
+        });
+
+        // Aggiungi la classe appropriata alle card in base alla classe del banner
+        if (bannerClass === 'bg-g') {
+            cards.forEach(card => card.classList.add('card-g'));
+        } else if (bannerClass === 'bg-y') {
+            cards.forEach(card => card.classList.add('card-y'));
+        } else if (bannerClass === 'bg-o') {
+            cards.forEach(card => card.classList.add('card-o'));
+        }
     }
 
     // Verifica se ci sono dati salvati in localStorage
