@@ -421,3 +421,14 @@ body.dark-mode {
         padding-right: 40px;
     }
 }
+
+.prezzo {
+    font-size: 1.15rem; /* Leggermente più grande del testo normale */
+}
+
+.panino-card .card-title {
+    font-weight: 900; /* Aumenta leggermente il peso del font solo per le card dei panini */
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+}
