@@ -132,12 +132,18 @@
 
         // Array di oggetti per i panini
         const panini = [
-            { nome: 'Panino Napoli', descrizione: 'Delizioso panino con ingredienti freschi.', prezzo: 5.00, immagine: 'Images/NAPOLI.png' },
-            { nome: 'Panino Milano', descrizione: 'Panino gourmet con salumi selezionati.', prezzo: 6.50, immagine: 'Images/carouselimg/7.1 charcoal burger 1.jpg' },
-            { nome: 'Panino Roma', descrizione: 'Panino classico con mozzarella di bufala.', prezzo: 7.00, immagine: 'Images/carouselimg/7.1 charcoal burger 1.jpg' },
-            { nome: 'Panino Torino', descrizione: 'Panino con carne e verdure grigliate.', prezzo: 6.00, immagine: 'Images/carouselimg/7.1 charcoal burger 1.jpg' },
-            { nome: 'Panino Firenze', descrizione: 'Panino vegetariano con pesto e pomodori secchi.', prezzo: 5.50, immagine: 'Images/carouselimg/7.1 charcoal burger 1.jpg' },
+            { nome: 'Lenticchie e carote', descrizione: '<ul><li>Burger di lenticchie</li> <li>Carote grattugiate</li><li>Insalata fresca</li><li>Salsa di yogurt di soia vegano</li><li>Cipolle caramellate</li><li>Avocado cremoso</li></ul>', prezzo: 15.00, immagine: 'Images/panini/Lenticchieecarote.webp' },
+            { nome: 'Panino con falafel', descrizione: '<ul><li>Pane pita</li><li>Falafel</li><li>Pomodori</li><li>Cetrioli</li><li>Lattuga</li><li>Salsa tzatziki vegana</li></ul>', prezzo: 16.50, immagine: 'Images/panini/Paninoconfalafel.webp' },
+            { nome: 'Panino con Tofu Marinato e Guacamole', descrizione: '<ul><li>Tofu</li><li>Salsa di soia</li><li>Peperoncino in polvere</li><li>Guacamole</li><li>Pomodoro</li><li>Lattuga</li></ul>', prezzo: 17.00, immagine: 'Images/panini/Tofueguacamole.webp' },
+            { nome: 'Vegan Burger', descrizione: '<ul><li>Veggie patty</li><li>Insalata</li><li>Pomodoro</li><li>Maionese vegana</li></ul>', prezzo: 16.00, immagine: 'Images/panini/VeganBurger.jpg' },
+            { nome: 'Boring Burger', descrizione: '<ul><li>Hamburger di fassone e suino</li><li>Bacon</li><li>Pomodoro</li><li>Insalata</li><li>Ketchup</li><li>Cheddar</li><li>Cetriolo</li></ul>', prezzo: 15.50, immagine: 'Images/panini/BoringBurger.jpg' },
+            { nome: 'Chicken burger', descrizione: '<ul><li>Hamburger di pollo</li><li>Pomodoro</li><li>Insalata</li><li>Ketchup</li><li>Cheddar</li><li>Cetriolo</li></ul>', prezzo: 15.50, immagine: 'Images/panini/Chickenburger.jpg' },
+            { nome: 'Charcoal burger carne', descrizione: '<ul><li>Hamburger di fassone</li><li>Insalata</li><li>Salsa allo yogurt</li><li>Cheddar</li><li>Melanzana</li><li>Pomodori</li><li>Cetriolo</li></ul>', prezzo: 15.50, immagine: 'Images/panini/charcoalburgercarne.jpg' },
+            { nome: 'Charcoal burger vegan', descrizione: '<ul><li>Cipolle</li><li>Insalata</li><li>Salsa allo yogurt</li><li>Cheddar</li><li>Melanzana</li><li>Pomodoro</li><li>Cetriolo</li></ul>', prezzo: 15.50, immagine: 'Images/panini/charcoalburgvegan.jpg' },
+            { nome: 'Ceci e spinaci', descrizione: '<ul><li>Burger di ceci e spinaci</li><li>Pomodoro</li><li>Rucola</li><li>Hummus</li></ul>', prezzo: 15.50, immagine: 'Images/panini/Ceciespinaci.webp' },
+            { nome: 'Nothing Burger', descrizione: 'Per gli amanti del pane ecco il nostro nothing burger, senza pretese.', prezzo: 1.00, immagine: 'Images/panini/nothing_burger.png' },
         ];
+
 
         function generaCard() {
             const menuDiv = document.getElementById('menu');
