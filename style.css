@@ -162,7 +162,7 @@ body {
 }
 
 .animated {
-    width: calc(100% - 10px);
+    width: calc(100% - 15px);
     /* Calcola la larghezza del rettangolo in base al contenuto, meno lo spessore */
     height: calc(100% - 10px);
     /* Calcola l'altezza del rettangolo in base al contenuto, meno lo spessore */
