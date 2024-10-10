@@ -308,6 +308,12 @@ path {
     height: auto;
     /* Mantiene l'aspetto proporzionale */
 }
+#banner-line-map {
+    width: 100%;
+    /* Definisce la larghezza del tuo SVG */
+    height: auto;
+    /* Mantiene l'aspetto proporzionale */
+}
 
 #sedi-line {
     width: 35%;

@@ -104,3 +104,34 @@ const svg3 = document.getElementById('footer-line');
 
             // Imposta l'attributo 'd' del percorso con la stringa creata
             path3.setAttribute('d', zigzagPath3);
+
+
+            // const svg4 = document.getElementById('banner-line-map');
+// const path4 = svg4.querySelector('path');
+
+// const svgWidth4 = svg4.clientWidth; // Ottieni la larghezza del SVG
+// const svgHeight4 = svg4.clientHeight; // Ottieni l'altezza del SVG
+
+// const startX4 = 0;       // Inizio X della traccia
+// const startY4 = svgHeight4 / 2;  // Inizio Y (centrato verticalmente)
+// const amplitude4 = svgHeight4 / 3; // Altezza massima degli zig-zag
+// const wavelength4 = svgWidth4 / 8; // Larghezza di un ciclo zig-zag
+
+// let zigzagPath4 = `M ${startX4} ${startY4} `; // Inizio del percorso
+
+// // Ciclo per generare i punti di controllo e le estremità per ciascun zig-zag
+// for (let i = 0; i < 10; i++) { // 10 segmenti di zig-zag
+//     const controlX4 = startX4 + i * wavelength4 + wavelength4 / 2; // Calcola la X del punto di controllo
+//     const controlY4 = (i % 2 === 0) ? startY4 - amplitude4 : startY4 + amplitude4; // Alterna Y del punto di controllo
+//     const endX4 = startX4 + (i + 1) * wavelength4; // Calcola la X finale del segmento
+//     const endY4 = startY4; // Mantieni la Y finale sulla linea centrale
+
+//     // Aggiungi il segmento di zig-zag al percorso
+//     zigzagPath4 += `Q ${controlX4} ${controlY4}, ${endX4} ${endY4} `;
+//     // Q: specifica una curva Bézier quadratica
+//     // controlX, controlY: coordinata del punto di controllo per la curva
+//     // endX, endY: coordinata finale del segmento di zig-zag
+// }
+
+// // Imposta l'attributo 'd' del percorso con la stringa creata
+// path4.setAttribute('d', zigzagPath4);
