@@ -20,7 +20,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-day fixed-top">
         <a class="navbar-brand" href="index.html">
             <img id="logo-img" src="Images/logo/transparent.png" alt="Logo">
         </a>
@@ -67,6 +67,7 @@
 
     <!-- Main Content -->
     <div class="container article-content mt-5 mt-lg-7">
+        
         <div class="row">
             <!-- Panini Cards -->
             <div class="col-md-8">
@@ -75,29 +76,26 @@
                 </div>
             </div>
 
-            <!-- Cart Sidebar -->
-            <div class="col-md-4">
-                <div class="cart mt-4"> <!-- Aggiunta la classe mt-4 per margine superiore -->
-                    <h4>Carrello</h4>
-                    <div id="carrello">
-                        <!-- Gli elementi del carrello verranno aggiunti dinamicamente -->
-                    </div>
-                    <hr>
-                    <div id="totale">
-                        <strong>Totale:</strong> €0.00
-                    </div>
-                    <button class="button w-100 mt-auto" style="color: black;"
-                        onclick="aggiungiAlCarrello('${panino.nome}', '${panino.prezzo}')">
-                        <svg class="animated-svg">
-                            <rect class="animated" x="0" y="0" fill="none" stroke="black" stroke-width="5"
-                                stroke-dasharray="10, 10" stroke-linecap="round" rx="5" ry="5" />
-                        </svg>
-                        <span>Procedi al Pagamento</span>
-                    </button>
-
-                    <!-- Modificato per adattarsi -->
-                </div>
-            </div>
+<!-- Cart Sidebar -->
+<div class="col-md-4">
+    <div class="cart mt-4 position-fixed" style="top: 200px; right: 600px; width: 100%; max-width: 350px;"> <!-- Aggiunto position-fixed e top -->
+        <h4>Carrello</h4>
+        <div id="carrello" style="max-height: 500px; overflow-y: auto;"> <!-- Gestisce lo scorrimento interno -->
+            <!-- Gli elementi del carrello verranno aggiunti dinamicamente -->
+        </div>
+        <hr>
+        <div id="totale">
+            <strong>Totale:</strong> €0.00
+        </div>
+        <button class="button w-100 mt-auto" style="color: black;" onclick="aggiungiAlCarrello('${panino.nome}', '${panino.prezzo}')">
+            <svg class="animated-svg">
+                <rect class="animated" x="0" y="0" fill="none" stroke="black" stroke-width="5"
+                    stroke-dasharray="10, 10" stroke-linecap="round" rx="5" ry="5" />
+            </svg>
+            <span>Procedi al Pagamento</span>
+        </button>
+    </div>
+</div>
         </div>
     </div>
 
@@ -107,16 +105,9 @@
             <path d="M0,147.04S2.69-117.4,111.03,62.97" stroke="black" stroke-width="8" stroke-linecap="round"
                 stroke-linejoin="round" fill="transparent" />
         </svg>
+    
 
-        <!-- Icona di Instagram posizionata in alto a destra -->
-        <div class="social-icons position-absolute top-0 end-0 me-4 mt-2">
-            <a href="https://www.instagram.com/justburgerjaita128?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
-                    width="30" height="30">
-            </a>
-        </div>
-
+    
         <h3 class="me-4 mt-1 fw-bold">&copy; 2024 Just Burger. <br> è una creazione del gruppo
             <span id="classe" class="fw-900 fst-italic txt-shadow">JAITA128
                 <!-- Div nascosto con i membri del gruppo -->
@@ -132,8 +123,15 @@
                 </div>
             </span>
         </h3>
-    </footer>
 
+                <!-- Icona di Instagram posizionata in alto a destra -->
+                <div class="social-icons mt-2">
+                    <a href="https://www.instagram.com/justburgerjaita128?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <img style="margin-right:20px" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30">
+                    </a>
+                </div>
+    </footer>
+    <script src="tracciaDinamica/tracciaDInamicaOrder.js"></script>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>

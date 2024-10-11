@@ -432,3 +432,7 @@ body.dark-mode {
     text-transform: uppercase;
     text-align: center;
 }
+
+.h-95 {
+    height: 96%;
+}
